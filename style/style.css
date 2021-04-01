@@ -1,42 +1,1593 @@
-/*
-    ==============================================
-                ****** RESET ******
-    ==============================================
-*/
-body {
-  margin: 0;
-}
-
-:root {
-  --color-red: #f42;
-  --bg-color-red: #f42;
-}
-
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
+* {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-ul {
-  list-style: none;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 a {
   text-decoration: none;
-  color: white;
+  color: rgba(255, 255, 255, 0.486);
 }
 
-a:hover {
-  color: #333;
-}
-
-/*
-    ==============================================
-                ****** GLOBAL ******
-    ==============================================
+/*    ==========================================
+                          NAV 
+      ==========================================
 */
+nav {
+  z-index: 99999;
+}
+
+.nav-img {
+  background-color: #000;
+  min-width: 127px;
+  display: none;
+}
+
+.nav-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 2rem;
+  background-color: rgba(0, 0, 0, 0.911);
+  padding: 0.6rem;
+  width: 100%;
+  display: none;
+}
+
+.nav-top-left ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  margin-left: 1rem;
+}
+
+.nav-top-right ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-top li {
+  list-style: none;
+}
+
+.nav-top .white-text {
+  color: #fff;
+}
+
+.nav-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav-bottom a {
+  color: rgba(136, 132, 132, 0.616);
+}
+
+.nav-bottom i {
+  text-align: end;
+  border-left: 1px solid rgba(136, 132, 132, 0.616);
+}
+
+.nav-bottom .fa-search {
+  color: rgba(136, 132, 132, 0.616);
+  padding: 1rem;
+}
+
+.nav-bottom .fa-bars {
+  color: #f12929;
+  padding: 1rem;
+}
+
+.nav-bottom img {
+  width: 127px;
+}
+
+.nav-bottom-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.nav-bottom-left ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 2rem;
+  padding-left: 1rem;
+  margin-left: 0.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: none;
+}
+
+.nav-bottom-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-bottom li {
+  list-style: none;
+}
+
+/*    ==========================================
+                          Header 
+      ==========================================
+*/
+header {
+  background-color: yellow;
+  padding: 1rem 0.5rem;
+  width: 100%;
+}
+
+header p {
+  margin-left: 1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/*    ==========================================
+                        Wrapper 
+      ==========================================
+*/
+.wrapper {
+  padding: 0 1rem;
+  position: relative;
+}
+
+.wrapper .wrapper-two {
+  margin: 1rem 0;
+}
+
+.wrapper .wrapper-one,
+.wrapper .wrapper-two,
+.wrapper .wrapper-three {
+  color: #fff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(216, 52, 30, 0.6)), to(#000)), url(/image/wrapper-pic1.PNG);
+  background-image: linear-gradient(rgba(216, 52, 30, 0.6), #000), url(/image/wrapper-pic1.PNG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  background-position: center;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.wrapper .wrapper-one:hover,
+.wrapper .wrapper-two:hover,
+.wrapper .wrapper-three:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(216, 52, 30, 0.5)), to(#000)), url(/image/wrapper-pic1.PNG);
+  background-image: linear-gradient(rgba(216, 52, 30, 0.5), #000), url(/image/wrapper-pic1.PNG);
+}
+
+.wrapper .wrapper-one-logo {
+  padding: 1rem;
+  display: none;
+}
+
+.wrapper .wrapper-one-logo img {
+  width: 300px;
+}
+
+.wrapper span {
+  padding: 1rem;
+  top: 0;
+  right: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  font-weight: bold;
+  display: none;
+}
+
+.wrapper .text {
+  padding: 1rem;
+  line-height: 1.5rem;
+}
+
+.wrapper h3 {
+  opacity: 0.8;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper h1 {
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper p {
+  color: rgba(255, 255, 255, 0.486);
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper p span:hover {
+  color: #fff;
+}
+
+/*    ==========================================
+                        MAIMBOX 
+      ==========================================
+*/
+.mainbox {
+  width: 84%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mainbox .card {
+  margin-top: 2rem;
+}
+
+.mainbox .card h2 {
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.mainbox .card h2 a {
+  color: red;
+}
+
+.mainbox .card h2 a:hover {
+  color: #423f3f;
+}
+
+.mainbox .card .card-content {
+  margin-top: 1.5rem;
+}
+
+.mainbox .card .card-content img {
+  width: 90px;
+  height: 90px;
+}
+
+.mainbox .card .card-content a {
+  color: #000;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.mainbox .card .card-content a:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+.mainbox .card .card-content p {
+  margin-top: 0.5rem;
+  color: rgba(117, 109, 109, 0.342);
+}
+
+.mainbox .card .card-content p a {
+  color: rgba(117, 109, 109, 0.342);
+  font-weight: normal;
+}
+
+.mainbox .card .card-content .card-content-one,
+.mainbox .card .card-content .card-content-two,
+.mainbox .card .card-content .card-content-three,
+.mainbox .card .card-content .card-content-four,
+.mainbox .card .card-content .card-content-five,
+.mainbox .card .card-content .card-content-six,
+.mainbox .card .card-content .card-content-seven,
+.mainbox .card .card-content .card-content-eight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.mainbox .card .card-content .card-content-one .card-content-one-text,
+.mainbox .card .card-content .card-content-two .card-content-one-text,
+.mainbox .card .card-content .card-content-three .card-content-one-text,
+.mainbox .card .card-content .card-content-four .card-content-one-text,
+.mainbox .card .card-content .card-content-five .card-content-one-text,
+.mainbox .card .card-content .card-content-six .card-content-one-text,
+.mainbox .card .card-content .card-content-seven .card-content-one-text,
+.mainbox .card .card-content .card-content-eight .card-content-one-text {
+  word-wrap: break-word;
+}
+
+.mainbox .hero {
+  margin-top: 2rem;
+}
+
+.mainbox .hero h2,
+.mainbox .hero p {
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.mainbox .hero h2 a,
+.mainbox .hero p a {
+  color: red;
+}
+
+.mainbox .hero h2 a:hover,
+.mainbox .hero p a:hover {
+  color: #423f3f;
+}
+
+.mainbox .hero p {
+  font-size: 18px;
+  padding-top: 1rem;
+}
+
+.mainbox .hero .hero-four {
+  display: none;
+}
+
+.mainbox .hero .hero-one,
+.mainbox .hero .hero-two,
+.mainbox .hero .hero-three,
+.mainbox .hero .hero-four {
+  margin-top: 2rem;
+  background-color: rgba(255, 192, 203, 0.171);
+  position: relative;
+}
+
+.mainbox .hero .hero-one img,
+.mainbox .hero .hero-two img,
+.mainbox .hero .hero-three img,
+.mainbox .hero .hero-four img {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 0.8rem;
+  left: 0.8rem;
+}
+
+.mainbox .hero .hero-one h3,
+.mainbox .hero .hero-two h3,
+.mainbox .hero .hero-three h3,
+.mainbox .hero .hero-four h3 {
+  background-color: #f51212;
+  color: #fff;
+  padding-left: 5.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.mainbox .hero .hero-one .hero-one-description,
+.mainbox .hero .hero-one .hero-two-description,
+.mainbox .hero .hero-one .hero-three-description,
+.mainbox .hero .hero-one .hero-four-description,
+.mainbox .hero .hero-two .hero-one-description,
+.mainbox .hero .hero-two .hero-two-description,
+.mainbox .hero .hero-two .hero-three-description,
+.mainbox .hero .hero-two .hero-four-description,
+.mainbox .hero .hero-three .hero-one-description,
+.mainbox .hero .hero-three .hero-two-description,
+.mainbox .hero .hero-three .hero-three-description,
+.mainbox .hero .hero-three .hero-four-description,
+.mainbox .hero .hero-four .hero-one-description,
+.mainbox .hero .hero-four .hero-two-description,
+.mainbox .hero .hero-four .hero-three-description,
+.mainbox .hero .hero-four .hero-four-description {
+  background-color: rgba(255, 192, 203, 0.315);
+  padding-left: 5.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.mainbox .hero .hero-one .hero-one-description h5,
+.mainbox .hero .hero-one .hero-two-description h5,
+.mainbox .hero .hero-one .hero-three-description h5,
+.mainbox .hero .hero-one .hero-four-description h5,
+.mainbox .hero .hero-two .hero-one-description h5,
+.mainbox .hero .hero-two .hero-two-description h5,
+.mainbox .hero .hero-two .hero-three-description h5,
+.mainbox .hero .hero-two .hero-four-description h5,
+.mainbox .hero .hero-three .hero-one-description h5,
+.mainbox .hero .hero-three .hero-two-description h5,
+.mainbox .hero .hero-three .hero-three-description h5,
+.mainbox .hero .hero-three .hero-four-description h5,
+.mainbox .hero .hero-four .hero-one-description h5,
+.mainbox .hero .hero-four .hero-two-description h5,
+.mainbox .hero .hero-four .hero-three-description h5,
+.mainbox .hero .hero-four .hero-four-description h5 {
+  font-weight: normal;
+  opacity: 0.4;
+}
+
+.mainbox .hero .hero-one .hero-one-lables,
+.mainbox .hero .hero-one .hero-two-lables,
+.mainbox .hero .hero-one .hero-three-lables,
+.mainbox .hero .hero-one .hero-four-lables,
+.mainbox .hero .hero-two .hero-one-lables,
+.mainbox .hero .hero-two .hero-two-lables,
+.mainbox .hero .hero-two .hero-three-lables,
+.mainbox .hero .hero-two .hero-four-lables,
+.mainbox .hero .hero-three .hero-one-lables,
+.mainbox .hero .hero-three .hero-two-lables,
+.mainbox .hero .hero-three .hero-three-lables,
+.mainbox .hero .hero-three .hero-four-lables,
+.mainbox .hero .hero-four .hero-one-lables,
+.mainbox .hero .hero-four .hero-two-lables,
+.mainbox .hero .hero-four .hero-three-lables,
+.mainbox .hero .hero-four .hero-four-lables {
+  padding: 1rem;
+  border-bottom: 1px solid pink;
+}
+
+.mainbox .hero .hero-one .hero-one-lables a .fas,
+.mainbox .hero .hero-one .hero-two-lables a .fas,
+.mainbox .hero .hero-one .hero-three-lables a .fas,
+.mainbox .hero .hero-one .hero-four-lables a .fas,
+.mainbox .hero .hero-two .hero-one-lables a .fas,
+.mainbox .hero .hero-two .hero-two-lables a .fas,
+.mainbox .hero .hero-two .hero-three-lables a .fas,
+.mainbox .hero .hero-two .hero-four-lables a .fas,
+.mainbox .hero .hero-three .hero-one-lables a .fas,
+.mainbox .hero .hero-three .hero-two-lables a .fas,
+.mainbox .hero .hero-three .hero-three-lables a .fas,
+.mainbox .hero .hero-three .hero-four-lables a .fas,
+.mainbox .hero .hero-four .hero-one-lables a .fas,
+.mainbox .hero .hero-four .hero-two-lables a .fas,
+.mainbox .hero .hero-four .hero-three-lables a .fas,
+.mainbox .hero .hero-four .hero-four-lables a .fas {
+  color: #000;
+}
+
+.mainbox .hero .hero-one .hero-one-lables p,
+.mainbox .hero .hero-one .hero-two-lables p,
+.mainbox .hero .hero-one .hero-three-lables p,
+.mainbox .hero .hero-one .hero-four-lables p,
+.mainbox .hero .hero-two .hero-one-lables p,
+.mainbox .hero .hero-two .hero-two-lables p,
+.mainbox .hero .hero-two .hero-three-lables p,
+.mainbox .hero .hero-two .hero-four-lables p,
+.mainbox .hero .hero-three .hero-one-lables p,
+.mainbox .hero .hero-three .hero-two-lables p,
+.mainbox .hero .hero-three .hero-three-lables p,
+.mainbox .hero .hero-three .hero-four-lables p,
+.mainbox .hero .hero-four .hero-one-lables p,
+.mainbox .hero .hero-four .hero-two-lables p,
+.mainbox .hero .hero-four .hero-three-lables p,
+.mainbox .hero .hero-four .hero-four-lables p {
+  font-size: 16px;
+  padding: 0;
+  line-height: 2rem;
+}
+
+.mainbox .hero .hero-one .hero-one-lables p a,
+.mainbox .hero .hero-one .hero-two-lables p a,
+.mainbox .hero .hero-one .hero-three-lables p a,
+.mainbox .hero .hero-one .hero-four-lables p a,
+.mainbox .hero .hero-two .hero-one-lables p a,
+.mainbox .hero .hero-two .hero-two-lables p a,
+.mainbox .hero .hero-two .hero-three-lables p a,
+.mainbox .hero .hero-two .hero-four-lables p a,
+.mainbox .hero .hero-three .hero-one-lables p a,
+.mainbox .hero .hero-three .hero-two-lables p a,
+.mainbox .hero .hero-three .hero-three-lables p a,
+.mainbox .hero .hero-three .hero-four-lables p a,
+.mainbox .hero .hero-four .hero-one-lables p a,
+.mainbox .hero .hero-four .hero-two-lables p a,
+.mainbox .hero .hero-four .hero-three-lables p a,
+.mainbox .hero .hero-four .hero-four-lables p a {
+  color: rgba(0, 0, 0, 0.527);
+}
+
+.mainbox .hero .hero-one .hero-one-lables .hero-one-lables-row1,
+.mainbox .hero .hero-one .hero-one-lables .hero-one-lables-row2,
+.mainbox .hero .hero-one .hero-one-lables .hero-two-lables-row1,
+.mainbox .hero .hero-one .hero-one-lables .hero-two-lables-row2,
+.mainbox .hero .hero-one .hero-one-lables .hero-three-lables-row1,
+.mainbox .hero .hero-one .hero-one-lables .hero-three-lables-row2,
+.mainbox .hero .hero-one .hero-one-lables .hero-four-lables-row1,
+.mainbox .hero .hero-one .hero-one-lables .hero-four-lables-row2,
+.mainbox .hero .hero-one .hero-two-lables .hero-one-lables-row1,
+.mainbox .hero .hero-one .hero-two-lables .hero-one-lables-row2,
+.mainbox .hero .hero-one .hero-two-lables .hero-two-lables-row1,
+.mainbox .hero .hero-one .hero-two-lables .hero-two-lables-row2,
+.mainbox .hero .hero-one .hero-two-lables .hero-three-lables-row1,
+.mainbox .hero .hero-one .hero-two-lables .hero-three-lables-row2,
+.mainbox .hero .hero-one .hero-two-lables .hero-four-lables-row1,
+.mainbox .hero .hero-one .hero-two-lables .hero-four-lables-row2,
+.mainbox .hero .hero-one .hero-three-lables .hero-one-lables-row1,
+.mainbox .hero .hero-one .hero-three-lables .hero-one-lables-row2,
+.mainbox .hero .hero-one .hero-three-lables .hero-two-lables-row1,
+.mainbox .hero .hero-one .hero-three-lables .hero-two-lables-row2,
+.mainbox .hero .hero-one .hero-three-lables .hero-three-lables-row1,
+.mainbox .hero .hero-one .hero-three-lables .hero-three-lables-row2,
+.mainbox .hero .hero-one .hero-three-lables .hero-four-lables-row1,
+.mainbox .hero .hero-one .hero-three-lables .hero-four-lables-row2,
+.mainbox .hero .hero-one .hero-four-lables .hero-one-lables-row1,
+.mainbox .hero .hero-one .hero-four-lables .hero-one-lables-row2,
+.mainbox .hero .hero-one .hero-four-lables .hero-two-lables-row1,
+.mainbox .hero .hero-one .hero-four-lables .hero-two-lables-row2,
+.mainbox .hero .hero-one .hero-four-lables .hero-three-lables-row1,
+.mainbox .hero .hero-one .hero-four-lables .hero-three-lables-row2,
+.mainbox .hero .hero-one .hero-four-lables .hero-four-lables-row1,
+.mainbox .hero .hero-one .hero-four-lables .hero-four-lables-row2,
+.mainbox .hero .hero-two .hero-one-lables .hero-one-lables-row1,
+.mainbox .hero .hero-two .hero-one-lables .hero-one-lables-row2,
+.mainbox .hero .hero-two .hero-one-lables .hero-two-lables-row1,
+.mainbox .hero .hero-two .hero-one-lables .hero-two-lables-row2,
+.mainbox .hero .hero-two .hero-one-lables .hero-three-lables-row1,
+.mainbox .hero .hero-two .hero-one-lables .hero-three-lables-row2,
+.mainbox .hero .hero-two .hero-one-lables .hero-four-lables-row1,
+.mainbox .hero .hero-two .hero-one-lables .hero-four-lables-row2,
+.mainbox .hero .hero-two .hero-two-lables .hero-one-lables-row1,
+.mainbox .hero .hero-two .hero-two-lables .hero-one-lables-row2,
+.mainbox .hero .hero-two .hero-two-lables .hero-two-lables-row1,
+.mainbox .hero .hero-two .hero-two-lables .hero-two-lables-row2,
+.mainbox .hero .hero-two .hero-two-lables .hero-three-lables-row1,
+.mainbox .hero .hero-two .hero-two-lables .hero-three-lables-row2,
+.mainbox .hero .hero-two .hero-two-lables .hero-four-lables-row1,
+.mainbox .hero .hero-two .hero-two-lables .hero-four-lables-row2,
+.mainbox .hero .hero-two .hero-three-lables .hero-one-lables-row1,
+.mainbox .hero .hero-two .hero-three-lables .hero-one-lables-row2,
+.mainbox .hero .hero-two .hero-three-lables .hero-two-lables-row1,
+.mainbox .hero .hero-two .hero-three-lables .hero-two-lables-row2,
+.mainbox .hero .hero-two .hero-three-lables .hero-three-lables-row1,
+.mainbox .hero .hero-two .hero-three-lables .hero-three-lables-row2,
+.mainbox .hero .hero-two .hero-three-lables .hero-four-lables-row1,
+.mainbox .hero .hero-two .hero-three-lables .hero-four-lables-row2,
+.mainbox .hero .hero-two .hero-four-lables .hero-one-lables-row1,
+.mainbox .hero .hero-two .hero-four-lables .hero-one-lables-row2,
+.mainbox .hero .hero-two .hero-four-lables .hero-two-lables-row1,
+.mainbox .hero .hero-two .hero-four-lables .hero-two-lables-row2,
+.mainbox .hero .hero-two .hero-four-lables .hero-three-lables-row1,
+.mainbox .hero .hero-two .hero-four-lables .hero-three-lables-row2,
+.mainbox .hero .hero-two .hero-four-lables .hero-four-lables-row1,
+.mainbox .hero .hero-two .hero-four-lables .hero-four-lables-row2,
+.mainbox .hero .hero-three .hero-one-lables .hero-one-lables-row1,
+.mainbox .hero .hero-three .hero-one-lables .hero-one-lables-row2,
+.mainbox .hero .hero-three .hero-one-lables .hero-two-lables-row1,
+.mainbox .hero .hero-three .hero-one-lables .hero-two-lables-row2,
+.mainbox .hero .hero-three .hero-one-lables .hero-three-lables-row1,
+.mainbox .hero .hero-three .hero-one-lables .hero-three-lables-row2,
+.mainbox .hero .hero-three .hero-one-lables .hero-four-lables-row1,
+.mainbox .hero .hero-three .hero-one-lables .hero-four-lables-row2,
+.mainbox .hero .hero-three .hero-two-lables .hero-one-lables-row1,
+.mainbox .hero .hero-three .hero-two-lables .hero-one-lables-row2,
+.mainbox .hero .hero-three .hero-two-lables .hero-two-lables-row1,
+.mainbox .hero .hero-three .hero-two-lables .hero-two-lables-row2,
+.mainbox .hero .hero-three .hero-two-lables .hero-three-lables-row1,
+.mainbox .hero .hero-three .hero-two-lables .hero-three-lables-row2,
+.mainbox .hero .hero-three .hero-two-lables .hero-four-lables-row1,
+.mainbox .hero .hero-three .hero-two-lables .hero-four-lables-row2,
+.mainbox .hero .hero-three .hero-three-lables .hero-one-lables-row1,
+.mainbox .hero .hero-three .hero-three-lables .hero-one-lables-row2,
+.mainbox .hero .hero-three .hero-three-lables .hero-two-lables-row1,
+.mainbox .hero .hero-three .hero-three-lables .hero-two-lables-row2,
+.mainbox .hero .hero-three .hero-three-lables .hero-three-lables-row1,
+.mainbox .hero .hero-three .hero-three-lables .hero-three-lables-row2,
+.mainbox .hero .hero-three .hero-three-lables .hero-four-lables-row1,
+.mainbox .hero .hero-three .hero-three-lables .hero-four-lables-row2,
+.mainbox .hero .hero-three .hero-four-lables .hero-one-lables-row1,
+.mainbox .hero .hero-three .hero-four-lables .hero-one-lables-row2,
+.mainbox .hero .hero-three .hero-four-lables .hero-two-lables-row1,
+.mainbox .hero .hero-three .hero-four-lables .hero-two-lables-row2,
+.mainbox .hero .hero-three .hero-four-lables .hero-three-lables-row1,
+.mainbox .hero .hero-three .hero-four-lables .hero-three-lables-row2,
+.mainbox .hero .hero-three .hero-four-lables .hero-four-lables-row1,
+.mainbox .hero .hero-three .hero-four-lables .hero-four-lables-row2,
+.mainbox .hero .hero-four .hero-one-lables .hero-one-lables-row1,
+.mainbox .hero .hero-four .hero-one-lables .hero-one-lables-row2,
+.mainbox .hero .hero-four .hero-one-lables .hero-two-lables-row1,
+.mainbox .hero .hero-four .hero-one-lables .hero-two-lables-row2,
+.mainbox .hero .hero-four .hero-one-lables .hero-three-lables-row1,
+.mainbox .hero .hero-four .hero-one-lables .hero-three-lables-row2,
+.mainbox .hero .hero-four .hero-one-lables .hero-four-lables-row1,
+.mainbox .hero .hero-four .hero-one-lables .hero-four-lables-row2,
+.mainbox .hero .hero-four .hero-two-lables .hero-one-lables-row1,
+.mainbox .hero .hero-four .hero-two-lables .hero-one-lables-row2,
+.mainbox .hero .hero-four .hero-two-lables .hero-two-lables-row1,
+.mainbox .hero .hero-four .hero-two-lables .hero-two-lables-row2,
+.mainbox .hero .hero-four .hero-two-lables .hero-three-lables-row1,
+.mainbox .hero .hero-four .hero-two-lables .hero-three-lables-row2,
+.mainbox .hero .hero-four .hero-two-lables .hero-four-lables-row1,
+.mainbox .hero .hero-four .hero-two-lables .hero-four-lables-row2,
+.mainbox .hero .hero-four .hero-three-lables .hero-one-lables-row1,
+.mainbox .hero .hero-four .hero-three-lables .hero-one-lables-row2,
+.mainbox .hero .hero-four .hero-three-lables .hero-two-lables-row1,
+.mainbox .hero .hero-four .hero-three-lables .hero-two-lables-row2,
+.mainbox .hero .hero-four .hero-three-lables .hero-three-lables-row1,
+.mainbox .hero .hero-four .hero-three-lables .hero-three-lables-row2,
+.mainbox .hero .hero-four .hero-three-lables .hero-four-lables-row1,
+.mainbox .hero .hero-four .hero-three-lables .hero-four-lables-row2,
+.mainbox .hero .hero-four .hero-four-lables .hero-one-lables-row1,
+.mainbox .hero .hero-four .hero-four-lables .hero-one-lables-row2,
+.mainbox .hero .hero-four .hero-four-lables .hero-two-lables-row1,
+.mainbox .hero .hero-four .hero-four-lables .hero-two-lables-row2,
+.mainbox .hero .hero-four .hero-four-lables .hero-three-lables-row1,
+.mainbox .hero .hero-four .hero-four-lables .hero-three-lables-row2,
+.mainbox .hero .hero-four .hero-four-lables .hero-four-lables-row1,
+.mainbox .hero .hero-four .hero-four-lables .hero-four-lables-row2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+.mainbox .hero .hero-one .hero-one-botoom-text,
+.mainbox .hero .hero-one .hero-two-botoom-text,
+.mainbox .hero .hero-one .hero-three-botoom-text,
+.mainbox .hero .hero-one .hero-four-botoom-text,
+.mainbox .hero .hero-two .hero-one-botoom-text,
+.mainbox .hero .hero-two .hero-two-botoom-text,
+.mainbox .hero .hero-two .hero-three-botoom-text,
+.mainbox .hero .hero-two .hero-four-botoom-text,
+.mainbox .hero .hero-three .hero-one-botoom-text,
+.mainbox .hero .hero-three .hero-two-botoom-text,
+.mainbox .hero .hero-three .hero-three-botoom-text,
+.mainbox .hero .hero-three .hero-four-botoom-text,
+.mainbox .hero .hero-four .hero-one-botoom-text,
+.mainbox .hero .hero-four .hero-two-botoom-text,
+.mainbox .hero .hero-four .hero-three-botoom-text,
+.mainbox .hero .hero-four .hero-four-botoom-text {
+  height: 150px;
+  padding: 1rem;
+}
+
+.mainbox .hero .hero-one .hero-one-botoom-text a,
+.mainbox .hero .hero-one .hero-two-botoom-text a,
+.mainbox .hero .hero-one .hero-three-botoom-text a,
+.mainbox .hero .hero-one .hero-four-botoom-text a,
+.mainbox .hero .hero-two .hero-one-botoom-text a,
+.mainbox .hero .hero-two .hero-two-botoom-text a,
+.mainbox .hero .hero-two .hero-three-botoom-text a,
+.mainbox .hero .hero-two .hero-four-botoom-text a,
+.mainbox .hero .hero-three .hero-one-botoom-text a,
+.mainbox .hero .hero-three .hero-two-botoom-text a,
+.mainbox .hero .hero-three .hero-three-botoom-text a,
+.mainbox .hero .hero-three .hero-four-botoom-text a,
+.mainbox .hero .hero-four .hero-one-botoom-text a,
+.mainbox .hero .hero-four .hero-two-botoom-text a,
+.mainbox .hero .hero-four .hero-three-botoom-text a,
+.mainbox .hero .hero-four .hero-four-botoom-text a {
+  color: rgba(0, 0, 0, 0.527);
+}
+
+.mainbox .container {
+  margin-top: 3rem;
+}
+
+.mainbox .container .container-two,
+.mainbox .container .container-three,
+.mainbox .container .container-four,
+.mainbox .container .container-five,
+.mainbox .container .container-six,
+.mainbox .container .container-seven,
+.mainbox .container .container-eight,
+.mainbox .container .container-nine {
+  margin-top: 1rem;
+}
+
+.mainbox .container .container-one h2,
+.mainbox .container .container-two h2,
+.mainbox .container .container-three h2,
+.mainbox .container .container-four h2,
+.mainbox .container .container-five h2,
+.mainbox .container .container-six h2,
+.mainbox .container .container-seven h2,
+.mainbox .container .container-eight h2,
+.mainbox .container .container-nine h2 {
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.mainbox .container .container-one h2 a,
+.mainbox .container .container-two h2 a,
+.mainbox .container .container-three h2 a,
+.mainbox .container .container-four h2 a,
+.mainbox .container .container-five h2 a,
+.mainbox .container .container-six h2 a,
+.mainbox .container .container-seven h2 a,
+.mainbox .container .container-eight h2 a,
+.mainbox .container .container-nine h2 a {
+  color: red;
+}
+
+.mainbox .container .container-one h2 a:hover,
+.mainbox .container .container-two h2 a:hover,
+.mainbox .container .container-three h2 a:hover,
+.mainbox .container .container-four h2 a:hover,
+.mainbox .container .container-five h2 a:hover,
+.mainbox .container .container-six h2 a:hover,
+.mainbox .container .container-seven h2 a:hover,
+.mainbox .container .container-eight h2 a:hover,
+.mainbox .container .container-nine h2 a:hover {
+  color: #423f3f;
+}
+
+.mainbox .container .container-one .container-one-pictext,
+.mainbox .container .container-two .container-one-pictext,
+.mainbox .container .container-three .container-one-pictext,
+.mainbox .container .container-four .container-one-pictext,
+.mainbox .container .container-five .container-one-pictext,
+.mainbox .container .container-six .container-one-pictext,
+.mainbox .container .container-seven .container-one-pictext,
+.mainbox .container .container-eight .container-one-pictext,
+.mainbox .container .container-nine .container-one-pictext {
+  margin-top: 1rem;
+  background-image: url(/image/boost.jpg);
+  background-size: 100% 100%;
+  padding-top: 50%;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.mainbox .container .container-one .container-one-pictext h5,
+.mainbox .container .container-two .container-one-pictext h5,
+.mainbox .container .container-three .container-one-pictext h5,
+.mainbox .container .container-four .container-one-pictext h5,
+.mainbox .container .container-five .container-one-pictext h5,
+.mainbox .container .container-six .container-one-pictext h5,
+.mainbox .container .container-seven .container-one-pictext h5,
+.mainbox .container .container-eight .container-one-pictext h5,
+.mainbox .container .container-nine .container-one-pictext h5 {
+  color: #fff;
+  padding-bottom: 0.5rem;
+}
+
+.mainbox .container .container-one .container-one-pictext h4,
+.mainbox .container .container-two .container-one-pictext h4,
+.mainbox .container .container-three .container-one-pictext h4,
+.mainbox .container .container-four .container-one-pictext h4,
+.mainbox .container .container-five .container-one-pictext h4,
+.mainbox .container .container-six .container-one-pictext h4,
+.mainbox .container .container-seven .container-one-pictext h4,
+.mainbox .container .container-eight .container-one-pictext h4,
+.mainbox .container .container-nine .container-one-pictext h4 {
+  padding-bottom: 0.6rem;
+}
+
+.mainbox .container .container-one .container-one-pictext h4 a,
+.mainbox .container .container-two .container-one-pictext h4 a,
+.mainbox .container .container-three .container-one-pictext h4 a,
+.mainbox .container .container-four .container-one-pictext h4 a,
+.mainbox .container .container-five .container-one-pictext h4 a,
+.mainbox .container .container-six .container-one-pictext h4 a,
+.mainbox .container .container-seven .container-one-pictext h4 a,
+.mainbox .container .container-eight .container-one-pictext h4 a,
+.mainbox .container .container-nine .container-one-pictext h4 a {
+  color: #fff;
+  font-size: 20px;
+}
+
+.mainbox .container .container-one .container-one-pictext h4 a:hover,
+.mainbox .container .container-two .container-one-pictext h4 a:hover,
+.mainbox .container .container-three .container-one-pictext h4 a:hover,
+.mainbox .container .container-four .container-one-pictext h4 a:hover,
+.mainbox .container .container-five .container-one-pictext h4 a:hover,
+.mainbox .container .container-six .container-one-pictext h4 a:hover,
+.mainbox .container .container-seven .container-one-pictext h4 a:hover,
+.mainbox .container .container-eight .container-one-pictext h4 a:hover,
+.mainbox .container .container-nine .container-one-pictext h4 a:hover {
+  text-decoration: underline;
+}
+
+.mainbox .container .container-one .container-one-pictext p,
+.mainbox .container .container-two .container-one-pictext p,
+.mainbox .container .container-three .container-one-pictext p,
+.mainbox .container .container-four .container-one-pictext p,
+.mainbox .container .container-five .container-one-pictext p,
+.mainbox .container .container-six .container-one-pictext p,
+.mainbox .container .container-seven .container-one-pictext p,
+.mainbox .container .container-eight .container-one-pictext p,
+.mainbox .container .container-nine .container-one-pictext p {
+  color: rgba(255, 255, 255, 0.486);
+}
+
+.mainbox .container .container-one .container-one-pictext p a:hover,
+.mainbox .container .container-two .container-one-pictext p a:hover,
+.mainbox .container .container-three .container-one-pictext p a:hover,
+.mainbox .container .container-four .container-one-pictext p a:hover,
+.mainbox .container .container-five .container-one-pictext p a:hover,
+.mainbox .container .container-six .container-one-pictext p a:hover,
+.mainbox .container .container-seven .container-one-pictext p a:hover,
+.mainbox .container .container-eight .container-one-pictext p a:hover,
+.mainbox .container .container-nine .container-one-pictext p a:hover {
+  color: #fff;
+}
+
+.mainbox .container .container-one .container-one-bottom,
+.mainbox .container .container-two .container-one-bottom,
+.mainbox .container .container-three .container-one-bottom,
+.mainbox .container .container-four .container-one-bottom,
+.mainbox .container .container-five .container-one-bottom,
+.mainbox .container .container-six .container-one-bottom,
+.mainbox .container .container-seven .container-one-bottom,
+.mainbox .container .container-eight .container-one-bottom,
+.mainbox .container .container-nine .container-one-bottom {
+  background-color: rgba(255, 192, 203, 0.308);
+  margin-top: 0.1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.mainbox .container .container-one .container-one-bottom img,
+.mainbox .container .container-two .container-one-bottom img,
+.mainbox .container .container-three .container-one-bottom img,
+.mainbox .container .container-four .container-one-bottom img,
+.mainbox .container .container-five .container-one-bottom img,
+.mainbox .container .container-six .container-one-bottom img,
+.mainbox .container .container-seven .container-one-bottom img,
+.mainbox .container .container-eight .container-one-bottom img,
+.mainbox .container .container-nine .container-one-bottom img {
+  width: 100px;
+  height: 180px;
+}
+
+.mainbox .container .container-one .container-one-bottom .container-one-bottom-text,
+.mainbox .container .container-two .container-one-bottom .container-one-bottom-text,
+.mainbox .container .container-three .container-one-bottom .container-one-bottom-text,
+.mainbox .container .container-four .container-one-bottom .container-one-bottom-text,
+.mainbox .container .container-five .container-one-bottom .container-one-bottom-text,
+.mainbox .container .container-six .container-one-bottom .container-one-bottom-text,
+.mainbox .container .container-seven .container-one-bottom .container-one-bottom-text,
+.mainbox .container .container-eight .container-one-bottom .container-one-bottom-text,
+.mainbox .container .container-nine .container-one-bottom .container-one-bottom-text {
+  padding: 1rem;
+}
+
+.mainbox .container .container-one .container-one-bottom .container-one-bottom-text h3,
+.mainbox .container .container-two .container-one-bottom .container-one-bottom-text h3,
+.mainbox .container .container-three .container-one-bottom .container-one-bottom-text h3,
+.mainbox .container .container-four .container-one-bottom .container-one-bottom-text h3,
+.mainbox .container .container-five .container-one-bottom .container-one-bottom-text h3,
+.mainbox .container .container-six .container-one-bottom .container-one-bottom-text h3,
+.mainbox .container .container-seven .container-one-bottom .container-one-bottom-text h3,
+.mainbox .container .container-eight .container-one-bottom .container-one-bottom-text h3,
+.mainbox .container .container-nine .container-one-bottom .container-one-bottom-text h3 {
+  color: red;
+  font-weight: normal;
+}
+
+.mainbox .container .container-one .container-one-bottom .container-one-bottom-text P,
+.mainbox .container .container-two .container-one-bottom .container-one-bottom-text P,
+.mainbox .container .container-three .container-one-bottom .container-one-bottom-text P,
+.mainbox .container .container-four .container-one-bottom .container-one-bottom-text P,
+.mainbox .container .container-five .container-one-bottom .container-one-bottom-text P,
+.mainbox .container .container-six .container-one-bottom .container-one-bottom-text P,
+.mainbox .container .container-seven .container-one-bottom .container-one-bottom-text P,
+.mainbox .container .container-eight .container-one-bottom .container-one-bottom-text P,
+.mainbox .container .container-nine .container-one-bottom .container-one-bottom-text P {
+  padding-top: 0.5rem;
+}
+
+.mainbox .container .container-one .container-one-bottom .container-one-bottom-text a,
+.mainbox .container .container-two .container-one-bottom .container-one-bottom-text a,
+.mainbox .container .container-three .container-one-bottom .container-one-bottom-text a,
+.mainbox .container .container-four .container-one-bottom .container-one-bottom-text a,
+.mainbox .container .container-five .container-one-bottom .container-one-bottom-text a,
+.mainbox .container .container-six .container-one-bottom .container-one-bottom-text a,
+.mainbox .container .container-seven .container-one-bottom .container-one-bottom-text a,
+.mainbox .container .container-eight .container-one-bottom .container-one-bottom-text a,
+.mainbox .container .container-nine .container-one-bottom .container-one-bottom-text a {
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.mainbox .container .container-one .container-one-bottom .container-one-bottom-text a:hover,
+.mainbox .container .container-two .container-one-bottom .container-one-bottom-text a:hover,
+.mainbox .container .container-three .container-one-bottom .container-one-bottom-text a:hover,
+.mainbox .container .container-four .container-one-bottom .container-one-bottom-text a:hover,
+.mainbox .container .container-five .container-one-bottom .container-one-bottom-text a:hover,
+.mainbox .container .container-six .container-one-bottom .container-one-bottom-text a:hover,
+.mainbox .container .container-seven .container-one-bottom .container-one-bottom-text a:hover,
+.mainbox .container .container-eight .container-one-bottom .container-one-bottom-text a:hover,
+.mainbox .container .container-nine .container-one-bottom .container-one-bottom-text a:hover {
+  text-decoration: underline;
+}
+
+.mainbox .container .container-one .container-one-list,
+.mainbox .container .container-two .container-one-list,
+.mainbox .container .container-three .container-one-list,
+.mainbox .container .container-four .container-one-list,
+.mainbox .container .container-five .container-one-list,
+.mainbox .container .container-six .container-one-list,
+.mainbox .container .container-seven .container-one-list,
+.mainbox .container .container-eight .container-one-list,
+.mainbox .container .container-nine .container-one-list {
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+
+.mainbox .container .container-one .container-one-list ul,
+.mainbox .container .container-two .container-one-list ul,
+.mainbox .container .container-three .container-one-list ul,
+.mainbox .container .container-four .container-one-list ul,
+.mainbox .container .container-five .container-one-list ul,
+.mainbox .container .container-six .container-one-list ul,
+.mainbox .container .container-seven .container-one-list ul,
+.mainbox .container .container-eight .container-one-list ul,
+.mainbox .container .container-nine .container-one-list ul {
+  color: red;
+}
+
+.mainbox .container .container-one .container-one-list ul li,
+.mainbox .container .container-two .container-one-list ul li,
+.mainbox .container .container-three .container-one-list ul li,
+.mainbox .container .container-four .container-one-list ul li,
+.mainbox .container .container-five .container-one-list ul li,
+.mainbox .container .container-six .container-one-list ul li,
+.mainbox .container .container-seven .container-one-list ul li,
+.mainbox .container .container-eight .container-one-list ul li,
+.mainbox .container .container-nine .container-one-list ul li {
+  padding-top: 1rem;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.233);
+}
+
+.mainbox .container .container-one .container-one-list ul li a,
+.mainbox .container .container-two .container-one-list ul li a,
+.mainbox .container .container-three .container-one-list ul li a,
+.mainbox .container .container-four .container-one-list ul li a,
+.mainbox .container .container-five .container-one-list ul li a,
+.mainbox .container .container-six .container-one-list ul li a,
+.mainbox .container .container-seven .container-one-list ul li a,
+.mainbox .container .container-eight .container-one-list ul li a,
+.mainbox .container .container-nine .container-one-list ul li a {
+  color: grey;
+}
+
+.mainbox .container .container-one .container-one-list ul li a:hover,
+.mainbox .container .container-two .container-one-list ul li a:hover,
+.mainbox .container .container-three .container-one-list ul li a:hover,
+.mainbox .container .container-four .container-one-list ul li a:hover,
+.mainbox .container .container-five .container-one-list ul li a:hover,
+.mainbox .container .container-six .container-one-list ul li a:hover,
+.mainbox .container .container-seven .container-one-list ul li a:hover,
+.mainbox .container .container-eight .container-one-list ul li a:hover,
+.mainbox .container .container-nine .container-one-list ul li a:hover {
+  color: rgba(0, 0, 0, 0.801);
+}
+
+/*    ==========================================
+                          Footer 
+      ==========================================
+*/
+footer {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+footer .footer-top {
+  background-color: #1f1e1e;
+  padding: 3rem 0;
+}
+
+footer .footer-top .footer-top-icons ul {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.5rem;
+  list-style: none;
+  width: auto;
+}
+
+footer .footer-top .footer-top-icons li {
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  background-color: #4e4c4c;
+  border: 2px solid #4e4c4c;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+footer .footer-top .footer-top-icons #displaynone {
+  display: none;
+}
+
+footer .footer-top .footer-top-icons li:hover {
+  cursor: pointer;
+  background-color: #1f1e1e;
+  border: 2px solid #4e4c4c;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+footer .footer-top-links {
+  margin-top: 2rem;
+}
+
+footer .footer-top-links ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer .footer-top-links ul li {
+  padding-left: 1rem;
+  line-height: 1.8rem;
+}
+
+footer .footer-bottom {
+  background-color: rgba(0, 0, 0, 0.911);
+  padding: 2rem;
+}
+
+footer .footer-bottom p {
+  color: rgba(255, 255, 255, 0.486);
+  font-size: 20px;
+  width: 60%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer .footer-bottom p .img-logo {
+  width: 30px;
+}
+
+footer .footer-bottom p .img-logo-stackpath {
+  width: 50px;
+}
+
+/*FINGERPRINT*/
+.fingerprint {
+  position: fixed;
+  z-index: 999;
+  left: 12px;
+  bottom: 10px;
+  width: 60px;
+  height: 60px;
+  background-color: #4e4c4c;
+  border: 2px solid #4e4c4c;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 30px;
+  color: rgba(255, 255, 255, 0.582);
+}
+
+/*    ==========================================
+              MEDIA QUERY - 768px TABLET  
+      ==========================================
+*/
+@media only screen and (min-width: 768px) {
+  /*  MEDIA QUERY - NAV  */
+  nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .nav-img {
+    display: block;
+  }
+  .nav-top .nav-top-right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .nav-top .nav-top-right img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .nav-bottom-right-bars {
+    display: none;
+  }
+  .nav-bottom-right-search {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .nav-bottom-left {
+    gap: 0;
+  }
+  .nav-bottom-left img {
+    display: none;
+  }
+  .nav-bottom-left ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .nav-bottom .fa-search {
+    padding-left: 0.2rem;
+    padding-right: 0;
+    margin-right: 1rem;
+  }
+  nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .nav-img {
+    width: 127px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav-img img {
+    width: 100%;
+    height: 70%;
+  }
+  .nav-bar {
+    width: 100%;
+  }
+  /*  MEDIA QUERY - Header  */
+  header {
+    padding: 2rem;
+  }
+  header p {
+    margin-left: 6rem;
+  }
+  /*  MEDIA QUERY - WRAPPER  */
+  .wrapper {
+    padding: 0 0.5rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    -ms-grid-columns: 2fr 1.5fr;
+        grid-template-columns: 2fr 1.5fr;
+        grid-template-areas: "first second" "first third";
+    grid-gap: 0.5rem;
+  }
+  .wrapper .wrapper-one {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: first;
+  }
+  .wrapper .wrapper-two {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: second;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  .wrapper .wrapper-three {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: third;
+  }
+  .wrapper .wrapper-one,
+  .wrapper .wrapper-two,
+  .wrapper .wrapper-three {
+    height: 100%;
+  }
+  .wrapper .wrapper-one .text,
+  .wrapper .wrapper-two .text,
+  .wrapper .wrapper-three .text {
+    line-height: 1.8rem;
+  }
+  .wrapper .wrapper-one h3,
+  .wrapper .wrapper-two h3,
+  .wrapper .wrapper-three h3 {
+    font-size: 18px;
+  }
+  .wrapper .wrapper-one h1,
+  .wrapper .wrapper-two h1,
+  .wrapper .wrapper-three h1 {
+    font-size: 25px;
+  }
+  /* MEDIA QUERY - MAINBOX */
+  .mainbox {
+    width: 94%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .mainbox .card .card-content {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "one two three" "four five six" "seven eight empty";
+    grid-gap: 1.5rem;
+  }
+  .mainbox .card .card-content img {
+    width: 100%;
+    height: 150px;
+  }
+  .mainbox .card .card-content .card-content-one {
+    display: block;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: one;
+  }
+  .mainbox .card .card-content .card-content-two {
+    display: block;
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: two;
+  }
+  .mainbox .card .card-content .card-content-three {
+    display: block;
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: three;
+  }
+  .mainbox .card .card-content .card-content-four {
+    display: block;
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: four;
+  }
+  .mainbox .card .card-content .card-content-five {
+    display: block;
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: five;
+  }
+  .mainbox .card .card-content .card-content-six {
+    display: block;
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: six;
+  }
+  .mainbox .card .card-content .card-content-seven {
+    display: block;
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: seven;
+  }
+  .mainbox .card .card-content .card-content-eight {
+    display: block;
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+    grid-area: eight;
+  }
+  .mainbox .hero-cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1.5rem;
+  }
+  .mainbox .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "one two" "three four" "five six" "seven eight" "nine emptyone";
+    grid-gap: 1rem;
+  }
+  .mainbox .container .container-one {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: one;
+  }
+  .mainbox .container .container-two {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: two;
+    margin-top: 0;
+  }
+  .mainbox .container .container-three {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: three;
+  }
+  .mainbox .container .container-four {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: four;
+  }
+  .mainbox .container .container-five {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: five;
+  }
+  .mainbox .container .container-six {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: six;
+  }
+  .mainbox .container .container-seven {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: seven;
+  }
+  .mainbox .container .container-eight {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+    grid-area: eight;
+  }
+  /*  MEDIA QUERY - FOOTER  */
+  footer .footer-bottom {
+    padding: 0;
+  }
+  footer .footer-bottom p {
+    font-size: 20px;
+    width: 100%;
+    text-align: none;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 3rem 2rem;
+  }
+  footer .footer-top-icons #displaynone {
+    display: block;
+  }
+}
+
+/*    ==========================================
+          MEDIA QUERY - 1440px Laptop-Desctop 
+      ==========================================
+*/
+@media only screen and (min-width: 1440px) {
+  .nav-bottom-right .fa-search {
+    padding: 1rem;
+  }
+  /* MEDIA WUERY - WRAPPER */
+  .wrapper {
+    padding: 0 0.5rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 2fr 2fr;
+        grid-template-rows: 2fr 2fr;
+    -ms-grid-columns: 2.5fr 1.5fr;
+        grid-template-columns: 2.5fr 1.5fr;
+        grid-template-areas: "first second" "first third";
+    grid-gap: 0.5rem;
+  }
+  .wrapper .wrapper-one {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: first;
+  }
+  .wrapper .wrapper-two {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: second;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  .wrapper .wrapper-three {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: third;
+  }
+  .wrapper .wrapper-one .wrapper-one-logo {
+    display: block;
+  }
+  .wrapper .wrapper-one span {
+    display: block;
+  }
+  .wrapper .wrapper-one,
+  .wrapper .wrapper-two,
+  .wrapper .wrapper-three {
+    height: 100%;
+  }
+  .wrapper .wrapper-one .text,
+  .wrapper .wrapper-two .text,
+  .wrapper .wrapper-three .text {
+    line-height: 2.2rem;
+  }
+  .wrapper .wrapper-one h1,
+  .wrapper .wrapper-two h1,
+  .wrapper .wrapper-three h1 {
+    font-size: 40px;
+  }
+  /* MEDIA QUERY - MAINBOX */
+  .mainbox {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .mainbox .card .card-content {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "one two three four" " five six seven eight ";
+    grid-gap: 1.5rem;
+  }
+  .mainbox .card .card-content img {
+    width: 100%;
+    height: 150px;
+  }
+  .mainbox .card .card-content .card-content-one {
+    display: block;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: one;
+  }
+  .mainbox .card .card-content .card-content-two {
+    display: block;
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: two;
+  }
+  .mainbox .card .card-content .card-content-three {
+    display: block;
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: three;
+  }
+  .mainbox .card .card-content .card-content-four {
+    display: block;
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: four;
+  }
+  .mainbox .card .card-content .card-content-five {
+    display: block;
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: five;
+  }
+  .mainbox .card .card-content .card-content-six {
+    display: block;
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+    grid-area: six;
+  }
+  .mainbox .card .card-content .card-content-seven {
+    display: block;
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: seven;
+  }
+  .mainbox .card .card-content .card-content-eight {
+    display: block;
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: eight;
+  }
+  .mainbox .hero .hero-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 1rem;
+  }
+  .mainbox .hero .hero-links .hero-menu :nth-child(1) {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  .mainbox .hero .hero-links .hero-menu :nth-child(2) {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .mainbox .hero .hero-links .hero-menu :nth-child(3) {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .mainbox .hero .hero-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1rem;
+  }
+  .mainbox .hero .hero-menu span a {
+    border-left: 1px solid red;
+    border-right: 1px solid red;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .mainbox .hero .hero-cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1.5rem;
+  }
+  .mainbox .hero .hero-four {
+    display: block;
+  }
+  .mainbox .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "one two three" " four five six" "seven eight nine";
+    grid-gap: 1rem;
+  }
+  .mainbox .container .container-one {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: one;
+  }
+  .mainbox .container .container-two {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: two;
+    margin-top: 0;
+  }
+  .mainbox .container .container-three {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: three;
+    margin-top: 0;
+  }
+  .mainbox .container .container-four {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: four;
+  }
+  .mainbox .container .container-five {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: five;
+  }
+  .mainbox .container .container-six {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+    grid-area: six;
+  }
+  .mainbox .container .container-seven {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: seven;
+  }
+  .mainbox .container .container-eight {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: eight;
+  }
+}
+/*# sourceMappingURL=style.css.map */
